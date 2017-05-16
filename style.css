@@ -34,12 +34,12 @@ body {
 #icon-svg {
 	 /*position: absolute;*/
 	 /*display: inline-block;*/
-	 margin-left: -150px;
+	 /*margin-left: -150px;*/
 	 margin-top: 18px;
     /*top: 2%;
     left: 7%;*/
-    width: 150px;
-    height: 120px;
+    width: 170px;
+    height: 130px;
     /*border: 3px solid #73AD21;*/
 }
 .svg-animate-slow {
@@ -70,8 +70,19 @@ Header styles
 --------------------------------------------------------------*/
 
 .masthead {
+	color: black;
+background: rgba(35,178,192,1);
+background: -moz-linear-gradient(-45deg, rgba(35,178,192,1) 0%, rgba(28,70,142,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(35,178,192,1)), color-stop(100%, rgba(28,70,142,1)));
+background: -webkit-linear-gradient(-45deg, rgba(35,178,192,1) 0%, rgba(28,70,142,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(35,178,192,1) 0%, rgba(28,70,142,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(35,178,192,1) 0%, rgba(28,70,142,1) 100%);
+background: linear-gradient(135deg, rgba(35,178,192,1) 0%, rgba(28,70,142,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23b2c0', endColorstr='#1c468e', GradientType=1 );
+
+
 	padding-bottom: 1em;
-	background: #eee;
+	/*background: #eee;*/
 	text-align: center;
 }
 
@@ -86,27 +97,38 @@ Header styles
 .site-title div {
 	display: inline-block;
 	/*text-align: left;*/
-	vertical-align: top;
+	vertical-align: center;
 
 }
 
 .site-title div h1 {
-		color: black;
+		color: white;
+		font-weight: 300;
+		margin-bottom: 0;
+		padding-bottom: 0;
+		text-align: left;
 }
 
+.main-header ul li {
+	text-align: left;
+}
 
+.main-header ul {
+	padding: 0;
+}
 
 ul>li {
-	display: inline-block;
+		list-style-type: none;
+		margin-bottom: 1em;
 }
 ul>li a {
-	margin-left: 1em;
+	margin-bottom: 1em;
 	color: inherit; 
 	text-decoration: none;
 }
 
 ul>li a:hover {
-	color: #252830; 
+	color: white; 
 }
 
 /*--------------------------------------------------------------
@@ -218,9 +240,14 @@ Gallery items
 }
 
 figure:hover {
-	-webkit-box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, 0.75);
+
+		-webkit-box-shadow: 0px 0px 15px 2px white;
+	-moz-box-shadow: 0px 0px 15px 2px  white;
+	box-shadow: 0px 0px 15px 2px  white;
+
+	/*-webkit-box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, 0.75);
 	-moz-box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, 0.75);
-	box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, 0.75);
+	box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, 0.75);*/
 }
 
 
@@ -235,15 +262,22 @@ Filter buttons
 .filters ul {
 	display: flex;
 	flex-wrap: wrap;
-	margin: 0;
+	margin: 1em;
 	padding: 0;
 	list-style-type: none;
 	justify-content: center;
-	align-items: center;
+	/*align-items: bottom;*/
+}
+
+.filters li:first-child {
+	border-right:none;
 }
 
 .filters li {
+	border-right:solid rgba(128, 128, 128, 0.35);
+	border-width: 2px;
 	margin: 0 2px 2px 0;
+	vertical-align: center;
 }
 
 .filter-list .filter-name {
@@ -251,24 +285,32 @@ Filter buttons
 }
 
 .filters a {
-	display: block;
+	/*display: block;*/
 	padding: .5em 1em;
 	font-size: 80%;
 	/*border: solid 1px hsl(0, 0%, 50%);*/
 	color: #fff;
 	text-decoration: none;
+	
 	/*background: white;*/
 }
 
 .filters a:hover {
-	/*outline: 2px solid white;*/
-	background: hsl(0, 0%, 70%);
-	;
+	color: #24A1D9;;
+
 }
 
 a.checked {
-	background: hsl(0, 0%, 50%);
-	color: white;
+	background: rgba(35,178,192,1);
+background: -moz-linear-gradient(-45deg, rgba(35,178,192,1) 0%, rgba(28,70,142,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(35,178,192,1)), color-stop(100%, rgba(28,70,142,1)));
+background: -webkit-linear-gradient(-45deg, rgba(35,178,192,1) 0%, rgba(28,70,142,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(35,178,192,1) 0%, rgba(28,70,142,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(35,178,192,1) 0%, rgba(28,70,142,1) 100%);
+background: linear-gradient(135deg, rgba(35,178,192,1) 0%, rgba(28,70,142,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23b2c0', endColorstr='#1c468e', GradientType=1 );
+	/*background: hsl(0, 0%, 50%);
+	color: white;*/
 }
 
 
